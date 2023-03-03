@@ -1,4 +1,4 @@
-package walkway.project.members;
+package walkway.project.service.members;
 
 public class Join {
     //회원가입 정보 받아오기

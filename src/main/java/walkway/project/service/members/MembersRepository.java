@@ -1,4 +1,4 @@
-package walkway.project.members;
+package walkway.project.service.members;
 
 import lombok.Data;
 
