@@ -1,17 +1,17 @@
 package walkway.project.controller.district;
 
-import lombok.Getter;
 import org.springframework.stereotype.Component;
-import walkway.project.controller.dispatcher.FrontController;
+import walkway.project.mapper.TownMapper;
 
 @Component
-@Getter
 public class District {
-    private final String disStrict;
-    FrontController frontController;
+    private final TownMapper townMapper;
 
-    public District() {
-        this.disStrict = null;
-        //db에서 가져온 정보 넣기"select district from matching_town where town = (입력된 마을);"
+    public District(TownMapper townMapper) {
+        this.townMapper = townMapper;
+    }
+
+    public String findByTown(String city, String town) {
+        return townMapper.findByTown(city, town);
     }
 }
